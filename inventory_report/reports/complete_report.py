@@ -12,7 +12,6 @@ class CompleteReport(SimpleReport):
             companys[item['nome_da_empresa']] += 1
         result = ''
         for item in companys.items():
-            print(item)
             result += f"- {item[0]}: {item[1]}\n"
         return result
 
