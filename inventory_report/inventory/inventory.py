@@ -16,7 +16,6 @@ def read_mode(path):
 
 
 class Inventory:
-    @staticmethod
     def import_data(path, type):
         content = read_mode(path)
         if type == "simples":
