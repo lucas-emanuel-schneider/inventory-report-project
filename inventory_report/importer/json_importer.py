@@ -6,6 +6,6 @@ class JsonImporter(Importer):
     @classmethod
     def import_data(cls, path):
         if ".json" not in path:
-            raise ValueError("Arquivo com formato inválido!")
+            raise ValueError("Arquivo inválido")
         with open(path) as jsonfile:
             return json.load(jsonfile)
