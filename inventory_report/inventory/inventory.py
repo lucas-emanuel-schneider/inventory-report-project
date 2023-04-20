@@ -16,8 +16,8 @@ def read_mode(path):
 
 
 class Inventory:
-    def import_data(path, type):
-        content = read_mode(path)
+    def import_data(self, type):
+        content = read_mode(self)
         if type == "simples":
             return SimpleReport.generate(content)
         elif type == "completo":
