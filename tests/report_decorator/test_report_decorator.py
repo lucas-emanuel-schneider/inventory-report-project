@@ -19,7 +19,7 @@ def test_decorar_relatorio():
     colored_complete_report = ColoredReport(
         CompleteReport).generate(new_product)
 
-    assert ("\033[36m" in colored_simple_report) is True
-    assert ("\033[36m" in colored_complete_report) is True
+    assert "\033[36m" in colored_simple_report
+    assert "\033[36m" in colored_complete_report
     assert ('\099[33m') not in colored_complete_report
     assert ('\099[33m') not in colored_simple_report

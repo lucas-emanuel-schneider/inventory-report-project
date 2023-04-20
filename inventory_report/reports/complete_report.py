@@ -5,15 +5,12 @@ class CompleteReport(SimpleReport):
 
     @classmethod
     def get_all_companys_and_nr_products(cls, list):
-        companys = dict()
+        companys = {}
         for item in list:
             if item['nome_da_empresa'] not in companys:
                 companys[item['nome_da_empresa']] = 0
             companys[item['nome_da_empresa']] += 1
-        result = ''
-        for item in companys.items():
-            result += f"- {item[0]}: {item[1]}\n"
-        return result
+        return ''.join(f"- {item[0]}: {item[1]}\n" for item in companys.items())
 
     @classmethod
     def generate(cls, list):

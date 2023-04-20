@@ -10,11 +10,12 @@ class SimpleReport:
 
     @classmethod
     def closest_expiration(cls, list):
-        return min([
-            item["data_de_validade"] for item in list
-            if datetime.strptime(
-                item["data_de_validade"], "%Y-%m-%d") > datetime.today()
-        ])
+        return min(
+            item["data_de_validade"]
+            for item in list
+            if datetime.strptime(item["data_de_validade"], "%Y-%m-%d")
+            > datetime.now()
+        )
 
     @classmethod
     def get_most_common_company(cls, list):
